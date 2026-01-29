@@ -1,1 +1,24 @@
-﻿body { font-family: Arial, sans-serif; }
+﻿
+
+.example1{
+    background: pink;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    place-items: center;
+}
+
+.parent {
+    background: lightblue;
+    width: 200px;
+    height: 200px;
+
+
+}
+
+.child{
+background: olive;
+width: 50%;
+height: 50%;
+
+}
