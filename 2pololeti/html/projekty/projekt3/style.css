@@ -22,3 +22,57 @@ width: 50%;
 height: 50%;
 
 }
+
+.master{
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+
+.negr{
+    background: pink;
+    width: 50%;
+    height: 50%;
+    place-items: center;
+    
+    
+}
+
+.panel {
+    background: lightgray;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-color: darkcyan;
+    margin-bottom: 16px;
+
+
+}
+.neco {
+    background: lightgray;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    border-width: 3px;
+    border-left-style: dashed;
+    border-top-style: dotted;
+    border-right-style: ridge;
+    border-bottom-style: double;
+    border-color: darkcyan;
+    border-right-color: blue;
+}
+
+.necomix {
+    background: lightgray;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    place-items: center;
+    border: 5px solid brown
+}
