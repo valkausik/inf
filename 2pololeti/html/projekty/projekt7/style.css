@@ -1,1 +1,15 @@
-﻿body { font-family: Arial, sans-serif; }
+﻿body {    font-family: Arial, sans-serif; }
+body {
+    background-color: rgb(223, 179, 179);
+}
+section {
+    background-color: white;
+    padding:30px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 10px magenta;
+    
+}
+h1 {
+    text-align: center;
+}

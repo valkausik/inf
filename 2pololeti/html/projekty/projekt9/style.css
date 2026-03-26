@@ -1,1 +1,24 @@
-﻿body { font-family: Arial, sans-serif; }
+﻿body {    font-family: Arial, sans-serif; }
+body {
+    background-color: rgb(223, 179, 179);
+    display: grid;
+}
+section {
+    background-color: white;
+    padding:30px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 10px magenta;
+    
+}
+
+
+.vk {
+    
+    background-color: aqua;
+    border-radius: 100%;
+    width: 50px;
+    display: grid;
+    font-display: center;
+    place-items: center;
+}
