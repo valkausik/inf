@@ -1,1 +1,15 @@
 ﻿body { font-family: Arial, sans-serif; }
+h2, div, ul {
+    background: green;
+}
+
+a, button {
+    background: lightgreen;
+    display: inline-block;
+    width: 180px;
+}
+
+.demo-wrap {
+
+    padding: 16px;
+}
