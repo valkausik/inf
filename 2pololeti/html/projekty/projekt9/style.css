@@ -9,16 +9,31 @@ section {
     margin: 20px;
     border-radius: 15px;
     box-shadow: 5px 10px magenta;
+    display: grid;
+    place-items: center;
     
 }
 
 
 .vk {
     
-    background-color: aqua;
+    background-color: rgb(110, 110, 241);
     border-radius: 100%;
-    width: 50px;
+    width: 100px;
+    height: 100px;
     display: grid;
     font-display: center;
     place-items: center;
+    color: white;
+}
+
+.zivotopis {
+    font-display: center;
+    display: grid;
+    font: impact;
+}
+
+
+.a {
+    background-color: aquamarine;
 }
