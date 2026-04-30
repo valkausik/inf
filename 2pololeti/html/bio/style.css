@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #0a0a0a;
+  --white: #f5f2ed;
+  --grey-light: #e0dcd5;
+  --grey-mid: #9a9590;
+  --accent: #c8a96e; /* warm gold — occasional color */
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'EB Garamond', Georgia, serif;
+  min-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+
+  /* subtle paper texture via repeating gradient */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(0,0,0,0.025) 28px,
+      rgba(0,0,0,0.025) 29px
+    );
+}
+
+/* ── Header / Name ── */
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  padding: 3.5rem 2.5rem 0.6rem;
+  color: var(--black);
+
+  /* decorative large first-letter */
+  position: relative;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  width: 3ch;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 0.55rem;
+}
+
+/* ── Divider ── */
+hr {
+  border: none;
+  border-top: 1.5px solid var(--black);
+  margin: 0 2.5rem 0;
+  opacity: 0.18;
+}
+
+/* ── Sections ── */
+section {
+  max-width: 680px;
+  margin: 3rem 2.5rem;
+  position: relative;
+}
+
+/* decorative section label */
+section.zivot::before {
+  content: 'O mně';
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+  margin-bottom: 0.9rem;
+}
+
+/* ── Body text ── */
+section p {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #2a2a2a;
+  font-style: italic;
+}
+
+/* drop-cap on first paragraph */
+section p:first-of-type::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.6em;
+  font-weight: 900;
+  line-height: 0.75;
+  float: left;
+  margin-right: 0.08em;
+  color: var(--accent);
+}
+
+/* ── Image placeholders (for when you add pictures) ── */
+img {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--grey-light);
+  filter: grayscale(30%);
+  transition: filter 0.4s ease;
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+/* ── Footer (if you ever add one) ── */
+footer {
+  margin-top: 6rem;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid var(--grey-light);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-mid);
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  h1 {
+    padding: 2rem 1.25rem 0.5rem;
+  }
+
+  hr {
+    margin: 0 1.25rem;
+  }
+
+  section {
+    margin: 2rem 1.25rem;
+  }
+}
