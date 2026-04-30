@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentin Koshan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Valentin Koshan</h1>
+    <hr>
+
+    <section class="zivot" id="zivot-section">
+        <p>Narodil jsem se ne v cesku a ted jsem v cesku a nejdriv jsem na nic nehral a ted hraju na cello a je mi za tyden 18</p>
+    </section>
+
+    <!-- Image Grid -->
+    <section class="gallery">
+        <div class="gallery-label">Fotky</div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="1000025031.jpg" alt="Fotka 1"></div>
+            <div class="gallery-item"><img src="1000025344.jpg" alt="Fotka 2"></div>
+
+            <div class="gallery-row">
+                <div class="gallery-item-wrapper">
+                    <div class="gallery-item"><img src="AI_Megpoid_GUMI_transparent.webp" alt="Fotka 3"></div>
+                    <div class="photo-label">
+                        <span class="photo-arrow">↑</span>
+                        <span class="photo-text">goon material</span>
+                    </div>
+                </div>
+                <div class="gallery-stack">
+                    <div class="gallery-item"><img src="hq720.jpg" alt="Fotka 4"></div>
+                    <div class="gallery-item"><img src="bigstock-405819263_-Lena42r-1440x980.jpg" alt="Fotka 5"></div>
+                    <div class="gallery-item"><img src="ec8h-the-cost-of-owning-a-cat-hero-cat.png" alt="Fotka 6"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Button -->
+    <hr>
+    <div class="kontakt-btn-wrapper">
+        <button class="kontakt-btn" id="kontakt-btn">Kontakt</button>
+    </div>
+
+    <!-- Kontakt Modal -->
+    <div class="modal-overlay" id="kontakt-overlay">
+        <div class="modal">
+            <button class="modal-close" id="kontakt-close">✕</button>
+            <div class="modal-label">Kontakt</div>
+            <h2>Napiš mi</h2>
+            <div class="kontakt-info">
+                <div class="kontakt-row">
+                    <span class="kontakt-icon">📞</span>
+                    <span class="kontakt-text">+420 775 203 155</span>
+                </div>
+                <div class="kontakt-row">
+                    <span class="kontakt-icon">✉️</span>
+                    <span class="kontakt-text">valkausik@gmail.com</span>
+                </div>
+            </div>
+            <a class="yt-btn" href="https://youtube.com/@wizzergd" target="_blank">▶ YouTube</a>
+        </div>
+    </div>
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="modal-close" id="modal-close">✕</button>
+            <div class="modal-label">O mně — podrobněji</div>
+            <h2>Valentin Koshan</h2>
+            <p>
+                Narodil jsem se ne v cesku a ted jsem v cesku a nejdriv jsem na nic nehral a ted hraju na cello a je mi za tyden 18.
+                <br><br>
+                <!-- Add more detail here — this is what shows in the expanded modal -->
+                Tady můžeš napsat cokoliv navíc — víc o sobě, svých zájmech, hudbě, cestování nebo čemkoliv dalším.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const section = document.getElementById('zivot-section');
+        const overlay = document.getElementById('modal-overlay');
+        const closeBtn = document.getElementById('modal-close');
+
+        section.addEventListener('click', () => {
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        function closeModal() {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) closeModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+        // Kontakt modal
+        const kontaktBtn = document.getElementById('kontakt-btn');
+        const kontaktOverlay = document.getElementById('kontakt-overlay');
+        const kontaktClose = document.getElementById('kontakt-close');
+
+        kontaktBtn.addEventListener('click', () => {
+            kontaktOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        kontaktClose.addEventListener('click', () => {
+            kontaktOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        kontaktOverlay.addEventListener('click', (e) => {
+            if (e.target === kontaktOverlay) {
+                kontaktOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+</body>
+</html>
